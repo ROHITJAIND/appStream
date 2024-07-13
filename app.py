@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-from streamlit_lottie import st_lottie
+import streamlit_lottie
 import requests
 
 model=pickle.load(open('model.pkl','rb'))
@@ -39,10 +39,10 @@ def result():
     prediction=model.predict(st.session_state.det)
     if(prediction==1):
         st.header("Congrats {} You are Hired".format(st.session_state.name))
-        st_lottie(HirA(),height=400,width=600)
+        streamlit_lottie.st_lottie(HirA(),height=400,width=600)
     else:
         st.header("Sorry {} You are NOT Hired".format(st.session_state.name))
-        st_lottie(NhirA(),height=400,width=400)
+        streamlit_lottie.st_lottie(NhirA(),height=400,width=400)
     if st.button("Home Page"):
         st.session_state.page='home'
 
