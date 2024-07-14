@@ -3,6 +3,7 @@ import pickle
 import numpy as np
 import streamlit_lottie
 import requests
+import catboost as cb
 
 model=pickle.load(open('model.pkl','rb'))
 st.set_page_config(page_title="Predict Hiring")
