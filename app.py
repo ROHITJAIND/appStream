@@ -122,6 +122,3 @@ elif st.session_state.page == 'result':
     result()
 elif st.session_state.page== 'visual':
     visual()
-
-
-    
