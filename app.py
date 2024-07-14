@@ -43,7 +43,7 @@ def result():
         streamlit_lottie.st_lottie(HirA(),height=400,width=600)
     else:
         st.header("Sorry {} You are NOT Hired".format(st.session_state.name))
-        streamlit_lottie.st_lottie(NhirA(),height=400,width=400)
+        streamlit_lottie.st_lottie(NhirA(),height=300,width=300)
     if st.button("Home Page"):
         st.session_state.page='home'
 
