@@ -1,0 +1,4 @@
+numpy==1.24.2
+Requests==2.32.3
+streamlit==1.26.0
+streamlit_lottie==0.0.5
