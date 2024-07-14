@@ -37,8 +37,8 @@ def details():
     eduD={None:0,"Bachelor's (B.E)":1,"Bachelor's (B.Tech)":2,"Master's":3,"PhD":4}
     genD={None:-1,"Male":0,"Female":1}
     ReqD={None:0,"Aggressive":1,"Moderate":2,"Conservative":3}
-    # EmpDet=np.asarray([age,genD[gender],eduD[edu],exp,pcom,dist,InterSco,SkiSco,PerSco,ReqD[ReqStr]])
-    EmpDet=np.array([26,1,2,0,3,26.783828,48,78,91,1])
+    EmpDet=np.asarray([age,genD[gender],eduD[edu],exp,pcom,dist,InterSco,SkiSco,PerSco,ReqD[ReqStr]])
+    # EmpDet=np.array([26,1,2,0,3,26.783828,48,78,91,1])
     if st.button("Check the Result"):
         st.session_state.det=EmpDet
         st.session_state.name=name 
