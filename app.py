@@ -23,16 +23,20 @@ def main():
 
 def details():
     name=st.text_input("Enter your Name:")
-    age=st.number_input("Enter your Age:",1,100)
-    gender=st.selectbox("Select Gender",[None,"Male","Female"])
-    edu=st.selectbox("Your Education Level",[None,"Bachelor's (B.E)","Bachelor's (B.Tech)","Master's","PhD"])
-    exp=st.number_input("Enter your Experience Years",0,50)  
-    pcom=st.number_input("Total Companies Served",0,50)
-    dist=st.number_input("Distance from Company (in Kms)",0,1000)
-    InterSco=st.number_input("Enter your Interview Score",0,100)  
-    SkiSco=st.number_input("Enter your Skill Score",0,100)
-    PerSco=st.number_input("Enter your Personality Score",0,100)
-    ReqStr=st.selectbox("Select Requirement Strategy",[None,"Aggressive","Moderate","Conservative"])
+    col1,col2=st.columns(2)
+    with col1:
+        gender=st.selectbox("Select Gender",[None,"Male","Female"])
+        exp=st.number_input("Enter your Experience Years",0,50)  
+        dist=st.number_input("Distance from Company (in Kms)",0,1000)
+        SkiSco=st.number_input("Enter your Skill Score",0,100)
+        ReqStr=st.selectbox("Select Requirement Strategy",[None,"Aggressive","Moderate","Conservative"])
+    with col2:
+        age=st.number_input("Enter your Age:",1,100)
+        edu=st.selectbox("Your Education Level",[None,"Bachelor's (B.E)","Bachelor's (B.Tech)","Master's","PhD"])
+        pcom=st.number_input("Total Companies Served",0,50)
+        InterSco=st.number_input("Enter your Interview Score",0,100)  
+        PerSco=st.number_input("Enter your Personality Score",0,100)
+    
 
     eduD={None:0,"Bachelor's (B.E)":1,"Bachelor's (B.Tech)":2,"Master's":3,"PhD":4}
     genD={None:-1,"Male":0,"Female":1}
